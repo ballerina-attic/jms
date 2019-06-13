@@ -1,0 +1,2 @@
+org.jballerina.jms.nativeimpl.endpoint.topic.subscriber.JmsTopicSubscriberServiceCompilerPlugin
+org.jballerina.jms.nativeimpl.endpoint.queue.receiver.JmsQueueRecieverServiceCompilerPlugin
