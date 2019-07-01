@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.jballerina.jms</groupId>
+        <groupId>org.ballerinax.jms</groupId>
         <artifactId>jms-extension-parent</artifactId>
         <version>0.992.0-m2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jms-extension-test</artifactId>
     <version>0.992.0-m2-SNAPSHOT</version>
-    <name>JBallerina - JMS Extension</name>
+    <name>Ballerinax - JMS Extension</name>
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -29,8 +29,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.jballerina.jms</groupId>
+            <groupId>org.ballerinax.jms</groupId>
             <artifactId>jms-extension</artifactId>
+            <version>0.992.0-m2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
@@ -65,7 +66,7 @@
 
         <!--Bal dependencies-->
         <dependency>
-            <groupId>org.jballerina.jms</groupId>
+            <groupId>org.ballerinax.jms</groupId>
             <artifactId>jms-extension</artifactId>
             <type>zip</type>
             <classifier>ballerina-binary-repo</classifier>

@@ -1,4 +1,4 @@
-import jballerina/jms;
+import ballerinax/jms;
 
 // Initialize a JMS connection with the provider
 jms:Connection jmsConnection = new({

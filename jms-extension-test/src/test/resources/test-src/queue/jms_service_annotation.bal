@@ -14,7 +14,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
-import jballerina/jms;
+import ballerinax/jms;
 
 listener jms:QueueListener consumerEndpoint = new({
         initialContextFactory: "bmbInitialContextFactory",

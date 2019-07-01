@@ -1,4 +1,4 @@
-import jballerina/jms;
+import ballerinax/jms;
 
 // Create a queue sender
 jms:QueueSender queueSender = new({

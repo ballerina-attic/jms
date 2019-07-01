@@ -1,4 +1,4 @@
-import jballerina/jms;
+import ballerinax/jms;
 
 string msgVal = "";
 // Initialize a JMS connection with the provider

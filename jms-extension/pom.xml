@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>org.jballerina.jms</groupId>
+        <groupId>org.ballerinax.jms</groupId>
         <artifactId>jms-extension-parent</artifactId>
         <version>0.992.0-m2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -12,7 +12,7 @@
     <artifactId>jms-extension</artifactId>
     <version>0.992.0-m2-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>JBallerina - JMS Extension</name>
+    <name>Ballerinax - JMS Extension</name>
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -66,6 +66,10 @@
             <groupId>org.ballerinalang</groupId>
             <artifactId>ballerina-runtime-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.ballerinalang</groupId>
+            <artifactId>ballerina-runtime</artifactId>
+        </dependency>
 
         <!--Bal dependencies-->
         <dependency>
@@ -89,7 +93,6 @@
         <dependency>
             <groupId>org.ballerinalang</groupId>
             <artifactId>ballerina-runtime-api</artifactId>
-            <version>${ballerina.version}</version>
             <type>zip</type>
             <classifier>ballerina-binary-repo</classifier>
         </dependency>
@@ -136,14 +139,18 @@
                                     <key>BALLERINA_DEV_MODE_COMPILE</key>
                                     <value>true</value>
                                 </systemProperty>
+                                <systemProperty>
+                                    <key>BALLERINA_DEV_COMPILE_BALLERINA_ORG</key>
+                                    <value>true</value>
+                                </systemProperty>
                             </systemProperties>
                             <arguments>
                                 <argument>false</argument>
-                                <argument>${basedir}/src/main/ballerina/jballerina</argument>
-                                <argument>${project.build.directory}/generated-balo/repo/jballerina</argument>
+                                <argument>${basedir}/src/main/ballerina/ballerinax</argument>
+                                <argument>${project.build.directory}/generated-balo/repo/ballerinax</argument>
                                 <argument>${project.build.directory}</argument>
                                 <argument>${project.version}</argument>
-                                <argument>false</argument>
+                                <argument>true</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -219,7 +226,7 @@
                         <processor>org.ballerinalang.codegen.BallerinaAnnotationProcessor</processor>
                     </processors>
                     <options>
-                        <nativeEntityProviderPackage>org.jballerina.jms.generated.providers
+                        <nativeEntityProviderPackage>org.ballerinax.jms.generated.providers
                         </nativeEntityProviderPackage>
                         <nativeEntityProviderClass>StandardNativeElementProvider</nativeEntityProviderClass>
                     </options>

@@ -20,10 +20,13 @@ under the License.
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="ballerina-test-suite">
+    <listeners>
+        <listener class-name="org.ballerinax.jms.JBallerinaTestInitializer" />
+    </listeners>
     <!-- Ballerina language Test Cases. -->
     <test name="ballerina-lang-test-suite" parallel="false">
         <packages>
-             <package name="org.jballerina.jms"/>
+             <package name="org.ballerinax.jms"/>
         </packages>
     </test>
 </suite>

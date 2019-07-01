@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jballerina.jms</groupId>
+    <groupId>org.ballerinax.jms</groupId>
     <artifactId>jms-extension-parent</artifactId>
     <packaging>pom</packaging>
-    <name>JBallerina - JMS</name>
+    <name>Ballerinax - JMS</name>
     <url>http://ballerinalang.org</url>
     <modules>
         <module>jms-extension</module>
@@ -97,6 +97,11 @@
             </dependency>
             <dependency>
                 <groupId>org.ballerinalang</groupId>
+                <artifactId>ballerina-runtime</artifactId>
+                <version>${ballerina.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ballerinalang</groupId>
                 <artifactId>ballerina-builtin</artifactId>
                 <version>${ballerina.version}</version>
                 <scope>test</scope>
@@ -114,7 +119,7 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.jballerina.jms</groupId>
+                <groupId>org.ballerinax.jms</groupId>
                 <artifactId>jms-extension</artifactId>
                 <version>${ballerina.version}</version>
             </dependency>
@@ -178,7 +183,7 @@
                 <classifier>ballerina-binary-repo</classifier>
             </dependency>
             <dependency>
-                <groupId>org.jballerina.jms</groupId>
+                <groupId>org.ballerinax.jms</groupId>
                 <artifactId>jms-extension</artifactId>
                 <version>${ballerina.version}</version>
                 <type>zip</type>
@@ -368,9 +373,9 @@
     </distributionManagement>
 
     <scm>
-        <url>https://github.com/jballerina/jms.git</url>
-        <developerConnection>scm:git:https://github.com/jballerina/jms.git</developerConnection>
-        <connection>scm:git:https://github.com/jballerina/jms.git</connection>
+        <url>https://github.com/ballerinax/jms.git</url>
+        <developerConnection>scm:git:https://github.com/ballerinax/jms.git</developerConnection>
+        <connection>scm:git:https://github.com/ballerinax/jms.git</connection>
         <tag>HEAD</tag>
     </scm>
 
